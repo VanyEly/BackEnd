@@ -1,12 +1,11 @@
 package com.portfolio.bve.Controller;
 
 import com.portfolio.bve.Entity.Persona;
-import com.portfolio.bve.Interface.IPersonaService;
+import com.portfolio.bve.Service.ImpPersonaService;
+
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
-//import org.springframework.security.access.prepost.PreAuthorize;
-//import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,10 +19,10 @@ import org.springframework.web.bind.annotation.RestController;
 //@CrossOrigin(origins = )
 @CrossOrigin(origins = {"https://frontedbal.web.app","http//localhost:4200"})
   public class PersonaController {
-    @Autowired IPersonaService ipersonaService;
+   @Autowired ImpPersonaService ipersonaService;
    
     @GetMapping("/personas/traer")
-    public List<Persona> getPersona(){
+   public List<Persona> getPersona(){
         return ipersonaService.getPersona();
     }
     
@@ -53,6 +52,7 @@ import org.springframework.web.bind.annotation.RestController;
          ipersonaService.savePersona(persona);
          return persona;
     }
+
     
    
     }

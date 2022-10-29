@@ -46,4 +46,12 @@ public class SExperiencia {
         return rExperiencia.existsByNombreE(nombreE);
     }
 
+    public Object getByNombre(String nombreE) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public boolean existsByNombre(String nombreE) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 }
